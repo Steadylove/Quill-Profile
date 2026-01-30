@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 1. 运行完整的 lint 校验，必须通过
+echo "🔍 Running lint check..."
+pnpm lint || {
+  echo "❌ Lint check failed! Please fix the errors before committing."
+  exit 1
+}
+
+# 2. 运行 format 格式化代码
+echo "✨ Running format..."
+pnpm format
+
+# 3. 运行 lint-staged 对暂存文件进行额外检查和格式化
+echo "📝 Running lint-staged..."
+pnpm exec lint-staged

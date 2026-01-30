@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "前端开发工程师 | 全栈工程师",
+    "description": "一名热爱技术的前端开发者，拥有3年 React、Next.js、Node.js、AI 和 Web3 开发经验。"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "skills": "技能",
+    "projects": "项目",
+    "experience": "经历",
+    "contact": "联系"
+  },
+  "hero": {
+    "greeting": "你好，我是",
+    "name": "你的名字",
+    "title": "前端开发工程师",
+    "subtitle": "全栈工程师 · AI & Web3 爱好者",
+    "description": "使用现代技术构建美观、高性能且创新的 Web 体验。专注于 React 生态系统、AI 集成和 Web3 开发。",
+    "status": "正在寻找新机会",
+    "cta": {
+      "projects": "查看项目",
+      "contact": "联系我"
+    },
+    "stats": {
+      "years": "年工作经验",
+      "projects": "已交付项目",
+      "clients": "满意客户"
+    }
+  },
+  "skills": {
+    "title": "技术栈",
+    "subtitle": "我使用的技术",
+    "categories": {
+      "frontend": "前端开发",
+      "backend": "后端开发",
+      "ai": "AI / 机器学习",
+      "web3": "Web3"
+    }
+  },
+  "projects": {
+    "title": "精选项目",
+    "subtitle": "我构建的一些作品",
+    "viewCode": "查看源码",
+    "viewLive": "在线演示",
+    "viewAll": "在 GitHub 查看全部",
+    "items": {
+      "project1": {
+        "title": "AI 驱动的数据仪表盘",
+        "description": "一个综合性的分析仪表盘，具备 AI 驱动的洞察、实时数据可视化和智能推荐功能。"
+      },
+      "project2": {
+        "title": "Web3 NFT 交易市场",
+        "description": "一个去中心化的数字藏品交易平台，支持钱包连接、智能合约和无缝交易体验。"
+      },
+      "project3": {
+        "title": "全栈 SaaS 平台",
+        "description": "使用 Next.js 和 NestJS 构建的企业级 SaaS 应用，具备认证、支付和团队协作功能。"
+      }
+    }
+  },
+  "experience": {
+    "title": "工作经历",
+    "subtitle": "我的职业历程",
+    "downloadResume": "下载简历",
+    "items": {
+      "job1": {
+        "company": "科技公司 A",
+        "position": "高级前端开发工程师",
+        "period": "2023 - 至今",
+        "description": "负责 AI 产品的前端架构设计，实现复杂的 UI 组件，指导初级开发人员。"
+      },
+      "job2": {
+        "company": "创业公司 B",
+        "position": "全栈开发工程师",
+        "period": "2022 - 2023",
+        "description": "从零构建 Web3 应用，集成区块链技术，开发智能合约交互界面。"
+      },
+      "job3": {
+        "company": "数字代理商 C",
+        "position": "前端开发工程师",
+        "period": "2021 - 2022",
+        "description": "使用 React 和 Next.js 开发响应式 Web 应用，与设计团队协作改进 UI/UX。"
+      }
+    }
+  },
+  "contact": {
+    "title": "联系我",
+    "subtitle": "让我们一起合作",
+    "description": "我随时欢迎讨论新项目、创意想法，或成为你愿景的一部分。",
+    "email": "邮箱",
+    "github": "GitHub",
+    "linkedin": "领英",
+    "twitter": "推特",
+    "cta": "发送问候"
+  },
+  "footer": {
+    "copyright": "版权所有",
+    "madeWith": "用心制作"
+  }
+}
