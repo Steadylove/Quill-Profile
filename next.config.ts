@@ -3,9 +3,14 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
+// 检测是否为静态导出（用于 GitHub Pages）
+const isExport = process.env.NEXT_EXPORT === "true" || process.env.GITHUB_ACTIONS === "true";
+
 const nextConfig: NextConfig = {
-  // 开发时不使用 export，部署时再启用
-  // output: 'export',
+  // 在 GitHub Actions 中启用静态导出
+  ...(isExport ? { output: "export" as const } : {}),
+  // 如果仓库名不是 username.github.io，需要设置 basePath
+  ...(isExport ? { basePath: "/Quill-Profile" } : {}),
   images: {
     unoptimized: true,
   },
