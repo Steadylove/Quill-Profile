@@ -56,6 +56,10 @@
       "project3": {
         "title": "全栈 SaaS 平台",
         "description": "使用 Next.js 和 NestJS 构建的企业级 SaaS 应用，具备认证、支付和团队协作功能。"
+      },
+      "project4": {
+        "title": "实时数据分析平台",
+        "description": "一个可扩展的分析平台，具备实时数据处理、交互式仪表盘和自动化报告功能。"
       }
     }
   },

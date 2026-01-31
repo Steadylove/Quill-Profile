@@ -57,16 +57,40 @@
   }
 }
 
-/* Base Styles */
-* {
+/* Base Styles - box-sizing only, let Tailwind handle the rest */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px;
+  scroll-padding-top: 0;
+}
+
+/* Full Page Scroll Snap */
+.scroll-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.scroll-section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Hide scrollbar for internal section scroll */
+.scroll-section::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-section {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body {
@@ -236,6 +260,43 @@ a {
     linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
   background-size: 100px 100px;
+}
+
+/* Starfield Background */
+.stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 40px 70px, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(1px 1px at 50px 160px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.25), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(1.5px 1.5px at 160px 120px, rgba(0, 255, 136, 0.4), transparent),
+    radial-gradient(1px 1px at 200px 50px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 220px 150px, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(1px 1px at 280px 90px, rgba(255, 255, 255, 0.25), transparent),
+    radial-gradient(1.5px 1.5px at 320px 180px, rgba(0, 255, 136, 0.35), transparent),
+    radial-gradient(1px 1px at 350px 30px, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(1px 1px at 400px 100px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 450px 60px, rgba(255, 255, 255, 0.2), transparent),
+    radial-gradient(1.5px 1.5px at 500px 140px, rgba(0, 255, 136, 0.3), transparent),
+    radial-gradient(1px 1px at 550px 200px, rgba(255, 255, 255, 0.25), transparent),
+    radial-gradient(1px 1px at 600px 80px, rgba(255, 255, 255, 0.2), transparent);
+  background-size: 650px 250px;
+  animation: twinkle 8s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
 
 /* Animations */

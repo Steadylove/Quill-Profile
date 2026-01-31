@@ -19,7 +19,10 @@ export default async function HomePage({ params }: Props) {
       <TechStack />
       <Projects />
       <Experience />
-      <Contact />
+      {/* Contact as the last scroll section */}
+      <section className="scroll-section relative flex flex-col bg-(--color-bg-secondary)">
+        <Contact />
+      </section>
     </>
   );
 }

@@ -21,29 +21,37 @@ export function Experience() {
   const lineHeight = useTransform(scrollYProgress, [0, 0.8], ["0%", "100%"]);
 
   return (
-    <section id="experience" className="relative py-40 md:py-56">
+    <section
+      id="experience"
+      className="scroll-section relative flex flex-col justify-center overflow-hidden py-16"
+    >
       {/* Background */}
-      <div className="grid-pattern absolute inset-0 opacity-20" />
+      <div className="absolute inset-0 bg-linear-to-b from-(--color-bg) via-(--color-bg-secondary) to-(--color-bg)" />
+      <div className="grid-pattern absolute inset-0 opacity-30" />
+      <div className="stars" />
+      {/* Gradient Orbs */}
+      <div className="absolute top-0 right-1/4 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-(--color-accent)/5 blur-[140px]" />
+      <div className="absolute bottom-0 left-1/4 h-[400px] w-[400px] translate-y-1/2 rounded-full bg-blue-500/5 blur-[120px]" />
 
-      <div className="section-container relative z-10">
+      <div className="section-container relative z-10 max-h-[calc(100vh-8rem)] overflow-y-auto">
         {/* Section Header */}
         <motion.div
-          className="mb-32 text-center"
+          className="mb-8 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="mb-10 flex items-center justify-center gap-8">
-            <div className="h-px w-24 bg-linear-to-r from-transparent to-(--color-accent)/30" />
-            <h2 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+          <div className="mb-4 flex items-center justify-center gap-6">
+            <div className="h-px w-16 bg-linear-to-r from-transparent to-(--color-accent)/30" />
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
               <span className="font-mono text-(--color-accent) opacity-50">{"["}</span>
               {t("title")}
               <span className="font-mono text-(--color-accent) opacity-50">{"]"}</span>
             </h2>
-            <div className="h-px w-24 bg-linear-to-l from-transparent to-(--color-accent)/30" />
+            <div className="h-px w-16 bg-linear-to-l from-transparent to-(--color-accent)/30" />
           </div>
-          <p className="mx-auto max-w-2xl text-xl leading-relaxed tracking-wide text-(--color-text-secondary)">
+          <p className="mx-auto max-w-2xl text-base text-(--color-text-secondary)">
             {t("subtitle")}
           </p>
         </motion.div>
@@ -59,7 +67,7 @@ export function Experience() {
           </div>
 
           {/* Timeline Items */}
-          <div className="space-y-32">
+          <div className="space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp.id}
@@ -150,7 +158,7 @@ export function Experience() {
 
         {/* Resume Download */}
         <motion.div
-          className="mt-32 text-center"
+          className="mt-8 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

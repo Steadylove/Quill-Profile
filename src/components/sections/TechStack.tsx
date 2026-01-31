@@ -72,130 +72,118 @@ export function TechStack() {
   const t = useTranslations("skills");
 
   return (
-    <section id="skills" className="relative py-40 md:py-56">
+    <section
+      id="skills"
+      className="scroll-section relative flex flex-col justify-center overflow-hidden py-12"
+    >
       {/* Background */}
       <div className="absolute inset-0 bg-linear-to-b from-(--color-bg) via-(--color-bg-secondary) to-(--color-bg)" />
+      <div className="grid-pattern absolute inset-0 opacity-30" />
+      <div className="stars" />
+      {/* Gradient Orbs */}
+      <div className="absolute top-1/4 right-0 h-[500px] w-[500px] translate-x-1/2 rounded-full bg-(--color-accent)/5 blur-[140px]" />
+      <div className="absolute bottom-1/4 left-0 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-blue-500/5 blur-[120px]" />
 
       <div className="section-container relative z-10">
         {/* Section Header */}
         <motion.div
-          className="mb-32 text-center"
+          className="mb-8 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="mb-10 flex items-center justify-center gap-8">
-            <div className="h-px w-24 bg-linear-to-r from-transparent to-(--color-accent)/30" />
-            <h2 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+          <div className="mb-4 flex items-center justify-center gap-6">
+            <div className="h-px w-16 bg-linear-to-r from-transparent to-(--color-accent)/30" />
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
               <span className="font-mono text-(--color-accent) opacity-50">{"<"}</span>
               {t("title")}
               <span className="font-mono text-(--color-accent) opacity-50">{"/>"}</span>
             </h2>
-            <div className="h-px w-24 bg-linear-to-l from-transparent to-(--color-accent)/30" />
+            <div className="h-px w-16 bg-linear-to-l from-transparent to-(--color-accent)/30" />
           </div>
-          <p className="mx-auto max-w-2xl text-xl leading-relaxed tracking-wide text-(--color-text-secondary)">
+          <p className="mx-auto max-w-2xl text-base text-(--color-text-secondary)">
             {t("subtitle")}
           </p>
         </motion.div>
 
-        {/* Bento Grid */}
-        <div className="mb-24 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+        {/* Bento Grid - 2 rows layout */}
+        <div className="mb-6 grid grid-cols-2 gap-3 lg:grid-cols-4">
           {bentoItems.map((item, index) => (
             <motion.div
               key={item.key}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className={`group relative overflow-hidden rounded-3xl border border-(--glass-border) bg-(--glass-bg) p-12 ${item.size === "large" ? "md:col-span-2 md:row-span-2" : ""} ${item.size === "wide" ? "lg:col-span-2" : ""} `}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              className="group relative overflow-hidden rounded-xl border border-(--glass-border) bg-(--glass-bg) p-4"
               style={{
                 background: `linear-gradient(135deg, ${item.color}08 0%, transparent 60%)`,
               }}
             >
-              {/* Hover Glow */}
-              <div
-                className="absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
-                style={{
-                  background: `radial-gradient(circle at 50% 50%, ${item.color}15 0%, transparent 80%)`,
-                }}
-              />
-
               {/* Category Header */}
-              <div className="relative mb-12">
-                <div className="flex items-center gap-5">
+              <div className="relative mb-4">
+                <div className="flex items-center gap-3">
                   <div
-                    className="h-4 w-4 rounded-full"
-                    style={{ backgroundColor: item.color, boxShadow: `0 0 20px ${item.color}` }}
+                    className="h-3 w-3 rounded-full"
+                    style={{ backgroundColor: item.color, boxShadow: `0 0 12px ${item.color}` }}
                   />
-                  <h3 className="text-2xl font-bold tracking-tight">
+                  <h3 className="text-lg font-bold tracking-tight">
                     {t(`categories.${item.key}`)}
                   </h3>
                 </div>
               </div>
 
-              {/* Skills Grid */}
-              <div
-                className={`relative grid gap-6 ${
-                  item.size === "large" ? "grid-cols-2 gap-8" : "grid-cols-1"
-                }`}
-              >
+              {/* Skills - Horizontal Layout */}
+              <div className="relative flex flex-wrap gap-2">
                 {item.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
-                    className="group/skill flex items-center gap-5 rounded-2xl border border-transparent bg-(--color-bg)/40 p-5 transition-all hover:border-(--glass-border) hover:bg-(--color-bg-tertiary) hover:shadow-xl"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    className="group/skill flex items-center gap-2 rounded-lg border border-transparent bg-(--color-bg)/40 px-3 py-2 transition-all hover:border-(--glass-border) hover:bg-(--color-bg-tertiary)"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 + skillIndex * 0.08 }}
-                    whileHover={{ x: 6, scale: 1.02 }}
+                    transition={{ delay: index * 0.05 + skillIndex * 0.05 }}
                   >
                     <div
-                      className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl shadow-inner transition-all"
+                      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md"
                       style={{
                         backgroundColor: `${item.color}15`,
                         color: item.color,
                       }}
                     >
-                      <skill.icon className="h-7 w-7" />
+                      <skill.icon className="h-4 w-4" />
                     </div>
-                    <span className="text-lg font-medium text-(--color-text-secondary) transition-colors group-hover/skill:text-(--color-text-primary)">
+                    <span className="text-sm font-medium text-(--color-text-secondary) transition-colors group-hover/skill:text-(--color-text-primary)">
                       {skill.name}
                     </span>
                   </motion.div>
                 ))}
               </div>
-
-              {/* Decorative Elements */}
-              <div
-                className="absolute -right-12 -bottom-12 h-56 w-56 rounded-full opacity-10 blur-[80px]"
-                style={{ backgroundColor: item.color }}
-              />
             </motion.div>
           ))}
         </div>
 
         {/* Other Tools */}
         <motion.div
-          className="mt-32 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.3 }}
         >
-          <p className="mb-10 font-mono text-sm tracking-[0.4em] text-(--color-text-muted) uppercase">
+          <p className="mb-4 font-mono text-xs tracking-[0.3em] text-(--color-text-muted) uppercase">
             Also experienced with
           </p>
-          <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-center gap-4">
+          <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-center gap-2">
             {otherTools.map((tool, index) => (
               <motion.span
                 key={tool}
-                className="rounded-xl border border-(--glass-border) bg-(--glass-bg) px-8 py-4 font-mono text-sm text-(--color-text-secondary) transition-all hover:border-(--color-accent)/50 hover:bg-(--color-bg-tertiary) hover:text-(--color-accent) hover:shadow-lg"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                className="rounded-lg border border-(--glass-border) bg-(--glass-bg) px-4 py-2 font-mono text-xs text-(--color-text-secondary) transition-all hover:border-(--color-accent)/50 hover:text-(--color-accent)"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.5 + index * 0.05 }}
-                whileHover={{ scale: 1.05, y: -4 }}
+                transition={{ delay: 0.3 + index * 0.03 }}
               >
                 {tool}
               </motion.span>

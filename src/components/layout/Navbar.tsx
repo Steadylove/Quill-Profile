@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
@@ -12,18 +12,53 @@ const navItems = [
   { key: "contact", href: "#contact" },
 ];
 
+const sectionIds = ["home", "skills", "projects", "experience", "contact"];
+
 export function Navbar() {
   const t = useTranslations("nav");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+  // Update hash based on visible section
+  const updateHash = useCallback(() => {
+    const scrollContainer = document.querySelector(".scroll-container");
+    if (!scrollContainer) return;
+
+    const windowHeight = window.innerHeight;
+
+    for (let i = sectionIds.length - 1; i >= 0; i--) {
+      const section = document.getElementById(sectionIds[i]);
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        // Check if section is in view (at least 50% visible)
+        if (rect.top <= windowHeight * 0.5) {
+          const newHash = sectionIds[i] === "home" ? "" : `#${sectionIds[i]}`;
+          if (window.location.hash !== newHash && window.location.hash !== `#${sectionIds[i]}`) {
+            history.replaceState(null, "", newHash || window.location.pathname);
+          }
+          break;
+        }
+      }
+    }
   }, []);
+
+  useEffect(() => {
+    const scrollContainer = document.querySelector(".scroll-container");
+
+    const handleScroll = () => {
+      const scrollTop = scrollContainer?.scrollTop || window.scrollY;
+      setIsScrolled(scrollTop > 50);
+      updateHash();
+    };
+
+    if (scrollContainer) {
+      scrollContainer.addEventListener("scroll", handleScroll);
+      return () => scrollContainer.removeEventListener("scroll", handleScroll);
+    } else {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [updateHash]);
 
   return (
     <motion.header
@@ -40,7 +75,7 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.a
-            href="#"
+            href="#home"
             className="text-accent font-mono text-2xl font-bold tracking-tighter"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

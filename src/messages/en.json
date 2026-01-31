@@ -56,6 +56,10 @@
       "project3": {
         "title": "Full Stack SaaS Platform",
         "description": "An enterprise-grade SaaS application built with Next.js and NestJS, featuring authentication, payments, and team collaboration."
+      },
+      "project4": {
+        "title": "Real-time Analytics Platform",
+        "description": "A scalable analytics platform with real-time data processing, interactive dashboards, and automated reporting features."
       }
     }
   },
