@@ -24,8 +24,7 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 10.17.0
+        # version 会自动从 package.json 的 packageManager 字段读取
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
