@@ -66,9 +66,7 @@ export function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "border-b border-(--glass-border) bg-(--color-bg)/70 py-4 shadow-2xl backdrop-blur-xl"
-          : "bg-transparent py-8"
+        isScrolled ? "bg-(--color-bg)/70 py-4 shadow-2xl backdrop-blur-xl" : "bg-transparent py-8"
       }`}
     >
       <nav className="section-container">

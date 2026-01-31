@@ -52,7 +52,7 @@ export function Contact() {
         <div className="absolute right-1/4 bottom-1/4 h-[300px] w-[300px] translate-x-1/2 translate-y-1/2 rounded-full bg-blue-500/5 blur-[100px]" />
       </div>
 
-      <div className="section-container relative z-10">
+      <div className="section-container relative z-10 pt-16">
         {/* Section Header */}
         <motion.div
           className="mb-12 text-center"

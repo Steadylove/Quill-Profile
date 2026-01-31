@@ -33,7 +33,7 @@ export function Experience() {
       <div className="absolute top-0 right-1/4 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-(--color-accent)/5 blur-[140px]" />
       <div className="absolute bottom-0 left-1/4 h-[400px] w-[400px] translate-y-1/2 rounded-full bg-blue-500/5 blur-[120px]" />
 
-      <div className="section-container relative z-10 max-h-[calc(100vh-8rem)] overflow-y-auto">
+      <div className="section-container relative z-10 max-h-[calc(100vh-8rem)] overflow-y-auto pt-16">
         {/* Section Header */}
         <motion.div
           className="mb-8 text-center"
@@ -158,7 +158,7 @@ export function Experience() {
 
         {/* Resume Download */}
         <motion.div
-          className="mt-8 text-center"
+          className="mt-8 mb-1 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

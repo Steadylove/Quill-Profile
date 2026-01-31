@@ -84,7 +84,7 @@ export function TechStack() {
       <div className="absolute top-1/4 right-0 h-[500px] w-[500px] translate-x-1/2 rounded-full bg-(--color-accent)/5 blur-[140px]" />
       <div className="absolute bottom-1/4 left-0 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-blue-500/5 blur-[120px]" />
 
-      <div className="section-container relative z-10">
+      <div className="section-container relative z-10 pt-16">
         {/* Section Header */}
         <motion.div
           className="mb-8 text-center"
