@@ -139,7 +139,7 @@ export function TechStack() {
                 {item.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
-                    className="group/skill flex items-center gap-2 rounded-lg border border-transparent bg-(--color-bg)/40 px-3 py-2 transition-all hover:border-(--glass-border) hover:bg-(--color-bg-tertiary)"
+                    className="group/skill flex cursor-pointer items-center gap-2 rounded-lg border border-transparent bg-(--color-bg)/40 px-3 py-2 transition-all hover:border-(--glass-border) hover:bg-(--color-bg-tertiary)"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -179,7 +179,7 @@ export function TechStack() {
             {otherTools.map((tool, index) => (
               <motion.span
                 key={tool}
-                className="rounded-lg border border-(--glass-border) bg-(--glass-bg) px-4 py-2 font-mono text-xs text-(--color-text-secondary) transition-all hover:border-(--color-accent)/50 hover:text-(--color-accent)"
+                className="cursor-pointer rounded-lg border border-(--glass-border) bg-(--glass-bg) px-4 py-2 font-mono text-xs text-(--color-text-secondary) transition-all hover:border-(--color-accent)/50 hover:text-(--color-accent)"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}

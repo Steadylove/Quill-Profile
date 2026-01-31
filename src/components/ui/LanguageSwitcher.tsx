@@ -26,7 +26,7 @@ export function LanguageSwitcher() {
         <motion.button
           key={loc.code}
           onClick={() => switchLocale(loc.code)}
-          className={`rounded-md px-3 py-1.5 font-mono text-sm transition-colors ${
+          className={`cursor-pointer rounded-md px-3 py-1.5 font-mono text-sm transition-colors ${
             locale === loc.code
               ? "bg-(--color-accent) text-(--color-bg)"
               : "text-(--color-text-secondary) hover:text-(--color-text-primary)"

@@ -74,7 +74,7 @@ export function Navbar() {
           {/* Logo */}
           <motion.a
             href="#home"
-            className="text-accent font-mono text-2xl font-bold tracking-tighter"
+            className="text-accent cursor-pointer font-mono text-2xl font-bold tracking-tighter"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -87,7 +87,7 @@ export function Navbar() {
               <motion.a
                 key={item.key}
                 href={item.href}
-                className="group relative text-sm font-medium tracking-widest text-(--color-text-secondary) uppercase transition-colors hover:text-(--color-text-primary)"
+                className="group relative cursor-pointer text-sm font-medium tracking-widest text-(--color-text-secondary) uppercase transition-colors hover:text-(--color-text-primary)"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 + 0.2 }}
@@ -105,7 +105,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="flex h-12 w-12 flex-col items-center justify-center gap-2 rounded-xl border border-(--glass-border) bg-(--glass-bg) md:hidden"
+            className="flex h-12 w-12 cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border border-(--glass-border) bg-(--glass-bg) md:hidden"
             aria-label="Toggle menu"
           >
             <motion.span
@@ -139,7 +139,7 @@ export function Navbar() {
                   key={item.key}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="group flex items-center text-2xl font-bold text-(--color-text-secondary) transition-colors hover:text-(--color-accent)"
+                  className="group flex cursor-pointer items-center text-2xl font-bold text-(--color-text-secondary) transition-colors hover:text-(--color-accent)"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}

@@ -23,7 +23,7 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="scroll-section relative flex flex-col justify-center overflow-hidden py-16"
+      className="scroll-section relative flex flex-col justify-center overflow-hidden pt-24 pb-16"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-linear-to-b from-(--color-bg) via-(--color-bg-secondary) to-(--color-bg)" />
@@ -33,7 +33,7 @@ export function Experience() {
       <div className="absolute top-0 right-1/4 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-(--color-accent)/5 blur-[140px]" />
       <div className="absolute bottom-0 left-1/4 h-[400px] w-[400px] translate-y-1/2 rounded-full bg-blue-500/5 blur-[120px]" />
 
-      <div className="section-container relative z-10 max-h-[calc(100vh-8rem)] overflow-y-auto pt-16">
+      <div className="section-container relative z-10 max-h-[calc(100vh-8rem)] overflow-y-auto pt-32">
         {/* Section Header */}
         <motion.div
           className="mb-8 text-center"
@@ -107,7 +107,7 @@ export function Experience() {
 
                 {/* Content Card */}
                 <motion.div
-                  className="group relative overflow-hidden rounded-3xl border border-(--glass-border) bg-(--glass-bg) p-12 shadow-xl backdrop-blur-md transition-all hover:border-(--color-border-hover) hover:shadow-2xl"
+                  className="group relative cursor-pointer overflow-hidden rounded-3xl border border-(--glass-border) bg-(--glass-bg) p-12 shadow-xl backdrop-blur-md transition-all hover:border-(--color-border-hover) hover:shadow-2xl"
                   whileHover={{ y: -8 }}
                 >
                   {/* Accent Line */}
@@ -166,7 +166,7 @@ export function Experience() {
         >
           <motion.a
             href="/resume.pdf"
-            className="inline-flex items-center gap-4 rounded-full border border-(--color-border) px-10 py-5 text-lg font-semibold text-(--color-text-secondary) shadow-lg transition-all hover:border-(--color-accent) hover:bg-(--color-bg-tertiary) hover:text-(--color-accent)"
+            className="inline-flex cursor-pointer items-center gap-4 rounded-full border border-(--color-border) px-10 py-5 text-lg font-semibold text-(--color-text-secondary) shadow-lg transition-all hover:border-(--color-accent) hover:bg-(--color-bg-tertiary) hover:text-(--color-accent)"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

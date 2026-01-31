@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00e67a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Modern Q - bold and elegant -->
+  <path d="M32 12C22.059 12 14 20.059 14 30C14 39.941 22.059 48 32 48C41.941 48 50 39.941 50 30C50 20.059 41.941 12 32 12ZM32 44C24.268 44 18 37.732 18 30C18 22.268 24.268 16 32 16C39.732 16 46 22.268 46 30C46 37.732 39.732 44 32 44Z" fill="url(#gradient)"/>
+  
+  <!-- Q tail - integrated smoothly -->
+  <path d="M44 36L52 52L48 54L40 38L44 36Z" fill="url(#gradient)"/>
+</svg>

@@ -119,7 +119,7 @@ export function Hero() {
             <motion.div variants={itemVariants} className="mb-8 flex flex-wrap items-center gap-5">
               <motion.a
                 href="#projects"
-                className="group relative overflow-hidden rounded-xl bg-(--color-accent) px-8 py-4 font-semibold tracking-wide !text-gray-900"
+                className="group relative cursor-pointer overflow-hidden rounded-xl bg-(--color-accent) px-8 py-4 font-semibold tracking-wide !text-gray-900"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -143,7 +143,7 @@ export function Hero() {
               </motion.a>
               <motion.a
                 href="#contact"
-                className="rounded-xl border border-(--color-border) px-8 py-4 font-semibold tracking-wide text-(--color-text-primary) transition-colors hover:border-(--color-accent) hover:text-(--color-accent)"
+                className="cursor-pointer rounded-xl border border-(--color-border) px-8 py-4 font-semibold tracking-wide text-(--color-text-primary) transition-colors hover:border-(--color-accent) hover:text-(--color-accent)"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -159,7 +159,7 @@ export function Hero() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-(--glass-border) bg-(--glass-bg) text-(--color-text-secondary) transition-all hover:border-(--color-accent)/50 hover:bg-(--color-bg-tertiary) hover:text-(--color-accent)"
+                  className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl border border-(--glass-border) bg-(--glass-bg) text-(--color-text-secondary) transition-all hover:border-(--color-accent)/50 hover:bg-(--color-bg-tertiary) hover:text-(--color-accent)"
                   whileHover={{ y: -3 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
@@ -221,7 +221,7 @@ export function Hero() {
         >
           <motion.a
             href="#skills"
-            className="flex flex-col items-center gap-3 text-(--color-text-muted) transition-colors hover:text-(--color-accent)"
+            className="flex cursor-pointer flex-col items-center gap-3 text-(--color-text-muted) transition-colors hover:text-(--color-accent)"
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
           >

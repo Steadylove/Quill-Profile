@@ -15,7 +15,7 @@ export function Footer() {
           {/* Logo */}
           <motion.a
             href="#"
-            className="font-mono text-xl font-bold text-(--color-accent)"
+            className="cursor-pointer font-mono text-xl font-bold text-(--color-accent)"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

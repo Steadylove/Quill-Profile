@@ -2,23 +2,37 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Frontend Developer | Full Stack Engineer",
+  title: "Quill Lu",
   description:
     "A passionate frontend developer with expertise in React, Next.js, Node.js, AI and Web3 development.",
-  keywords: ["Frontend Developer", "Full Stack", "React", "Next.js", "Node.js", "AI", "Web3"],
-  authors: [{ name: "Your Name" }],
+  keywords: [
+    "Frontend Developer",
+    "Full Stack",
+    "React",
+    "Next.js",
+    "Node.js",
+    "AI",
+    "Web3",
+    "Quill Lu",
+  ],
+  authors: [{ name: "Quill Lu" }],
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://yourdomain.com",
-    title: "Frontend Developer | Full Stack Engineer",
+    title: "Quill Lu",
     description:
       "A passionate frontend developer with expertise in React, Next.js, Node.js, AI and Web3 development.",
-    siteName: "Your Portfolio",
+    siteName: "Quill Lu",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Frontend Developer | Full Stack Engineer",
+    title: "Quill Lu",
     description:
       "A passionate frontend developer with expertise in React, Next.js, Node.js, AI and Web3 development.",
   },

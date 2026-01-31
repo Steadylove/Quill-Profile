@@ -88,7 +88,7 @@ export function Contact() {
             {/* Main CTA */}
             <motion.a
               href="mailto:your@email.com"
-              className="group relative inline-flex items-center gap-3 overflow-hidden rounded-xl bg-(--color-accent) px-8 py-4 font-bold !text-gray-900 shadow-lg"
+              className="group relative inline-flex cursor-pointer items-center gap-3 overflow-hidden rounded-xl bg-(--color-accent) px-8 py-4 font-bold !text-gray-900 shadow-lg"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -108,7 +108,7 @@ export function Contact() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex h-11 w-11 items-center justify-center rounded-xl border border-(--glass-border) bg-(--glass-bg) backdrop-blur-md transition-all hover:border-(--color-accent)/40 hover:bg-(--color-bg-tertiary)"
+                  className="group flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl border border-(--glass-border) bg-(--glass-bg) backdrop-blur-md transition-all hover:border-(--color-accent)/40 hover:bg-(--color-bg-tertiary)"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}

@@ -92,7 +92,7 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className={`group relative overflow-hidden rounded-xl border border-(--glass-border) bg-(--glass-bg) p-5 backdrop-blur-md transition-all duration-300 hover:border-(--color-accent)/40 hover:shadow-(--color-accent)/5 hover:shadow-lg ${
+              className={`group relative cursor-pointer overflow-hidden rounded-xl border border-(--glass-border) bg-(--glass-bg) p-5 backdrop-blur-md transition-all duration-300 hover:border-(--color-accent)/40 hover:shadow-(--color-accent)/5 hover:shadow-lg ${
                 project.featured ? "lg:col-span-2" : ""
               }`}
             >
@@ -130,7 +130,7 @@ export function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-8 w-8 items-center justify-center rounded-lg border border-(--glass-border) bg-(--color-bg-tertiary) text-(--color-text-muted) transition-all hover:border-(--color-accent)/50 hover:text-(--color-accent)"
+                    className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg border border-(--glass-border) bg-(--color-bg-tertiary) text-(--color-text-muted) transition-all hover:border-(--color-accent)/50 hover:text-(--color-accent)"
                     whileHover={{ scale: 1.05 }}
                     aria-label={t("viewCode")}
                   >
@@ -140,7 +140,7 @@ export function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-8 w-8 items-center justify-center rounded-lg border border-(--glass-border) bg-(--color-bg-tertiary) text-(--color-text-muted) transition-all hover:border-(--color-accent)/50 hover:text-(--color-accent)"
+                    className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg border border-(--glass-border) bg-(--color-bg-tertiary) text-(--color-text-muted) transition-all hover:border-(--color-accent)/50 hover:text-(--color-accent)"
                     whileHover={{ scale: 1.05 }}
                     aria-label={t("viewLive")}
                   >
@@ -190,7 +190,7 @@ export function Projects() {
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-(--color-border) px-6 py-2.5 text-sm font-semibold text-(--color-text-secondary) transition-all hover:border-(--color-accent) hover:text-(--color-accent)"
+            className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-(--color-border) px-6 py-2.5 text-sm font-semibold text-(--color-text-secondary) transition-all hover:border-(--color-accent) hover:text-(--color-accent)"
             whileHover={{ scale: 1.02 }}
           >
             {t("viewAll")}
