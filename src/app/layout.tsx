@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+// 部署到 GitHub Pages 时需带 basePath，否则 favicon 等静态资源会 404
+const basePath =
+  process.env.NEXT_EXPORT === "true" || process.env.GITHUB_ACTIONS === "true"
+    ? "/Quill-Profile"
+    : "";
+
 export const metadata: Metadata = {
   title: "Quill Lu",
   description:
@@ -17,9 +23,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Quill Lu" }],
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: `${basePath}/favicon.svg`,
+    shortcut: `${basePath}/favicon.svg`,
+    apple: `${basePath}/favicon.svg`,
   },
   openGraph: {
     type: "website",
