@@ -2,44 +2,25 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { GitHubIcon, ExternalLinkIcon } from "@/components/ui/Icons";
+import { GitHubIcon } from "@/components/ui/Icons";
 
 const projects = [
   {
-    id: "project1",
+    id: "alpacaInvoice",
     featured: true,
-    tags: ["Next.js", "OpenAI", "TypeScript", "Tailwind"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    color: "#10A37F",
-    icon: "🤖",
+    tags: ["Next.js", "TypeScript", "Aleo/Leo", "ZK Proofs", "Zustand", "Tailwind CSS"],
+    github: "https://github.com/WHXisWH/alpaca-invoice",
+    demo: "https://alpaca-invoice.vercel.app",
+    color: "#8B5CF6",
+    icon: "🔒",
   },
   {
-    id: "project2",
+    id: "meiTranslate",
     featured: true,
-    tags: ["React", "Solidity", "Web3.js", "Ethereum"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    color: "#627EEA",
-    icon: "⛓️",
-  },
-  {
-    id: "project3",
-    featured: false,
-    tags: ["Next.js", "NestJS", "PostgreSQL", "Docker"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    color: "#00ff88",
-    icon: "🚀",
-  },
-  {
-    id: "project4",
-    featured: false,
-    tags: ["Vue.js", "Node.js", "MongoDB", "AWS"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    color: "#42b883",
-    icon: "📊",
+    tags: ["React", "TypeScript", "Vite", "Cloudflare Workers", "Hono", "Tailwind CSS"],
+    github: "https://github.com/Steadylove/mei-translate",
+    color: "#3B82F6",
+    icon: "🌐",
   },
 ];
 
@@ -84,17 +65,18 @@ export function Projects() {
         </motion.div>
 
         {/* Bento Grid Projects */}
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {projects.map((project, index) => (
-            <motion.article
+            <motion.a
               key={project.id}
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className={`group relative cursor-pointer overflow-hidden rounded-xl border border-(--glass-border) bg-(--glass-bg) p-5 backdrop-blur-md transition-all duration-300 hover:border-(--color-accent)/40 hover:shadow-(--color-accent)/5 hover:shadow-lg ${
-                project.featured ? "lg:col-span-2" : ""
-              }`}
+              className="group relative block cursor-pointer overflow-hidden rounded-xl border border-(--glass-border) bg-(--glass-bg) p-5 backdrop-blur-md transition-all duration-300 hover:border-(--color-accent)/40 hover:shadow-(--color-accent)/5 hover:shadow-lg"
             >
               {/* Gradient Background */}
               <div
@@ -105,7 +87,6 @@ export function Projects() {
               {/* Header */}
               <div className="mb-4 flex items-start justify-between">
                 <div className="flex items-center gap-3">
-                  {/* Icon */}
                   <div
                     className="flex h-10 w-10 items-center justify-center rounded-lg text-xl"
                     style={{ backgroundColor: `${project.color}15` }}
@@ -124,28 +105,8 @@ export function Projects() {
                     </span>
                   )}
                 </div>
-                {/* Links */}
-                <div className="flex gap-2">
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg border border-(--glass-border) bg-(--color-bg-tertiary) text-(--color-text-muted) transition-all hover:border-(--color-accent)/50 hover:text-(--color-accent)"
-                    whileHover={{ scale: 1.05 }}
-                    aria-label={t("viewCode")}
-                  >
-                    <GitHubIcon className="h-4 w-4" />
-                  </motion.a>
-                  <motion.a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg border border-(--glass-border) bg-(--color-bg-tertiary) text-(--color-text-muted) transition-all hover:border-(--color-accent)/50 hover:text-(--color-accent)"
-                    whileHover={{ scale: 1.05 }}
-                    aria-label={t("viewLive")}
-                  >
-                    <ExternalLinkIcon className="h-4 w-4" />
-                  </motion.a>
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-(--glass-border) bg-(--color-bg-tertiary) text-(--color-text-muted) transition-all group-hover:border-(--color-accent)/50 group-hover:text-(--color-accent)">
+                  <GitHubIcon className="h-4 w-4" />
                 </div>
               </div>
 
@@ -153,7 +114,7 @@ export function Projects() {
               <h3 className="mb-2 text-lg font-bold tracking-tight transition-colors group-hover:text-(--color-accent)">
                 {t(`items.${project.id}.title`)}
               </h3>
-              <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-(--color-text-secondary)">
+              <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-(--color-text-secondary)">
                 {t(`items.${project.id}.description`)}
               </p>
 
@@ -174,7 +135,7 @@ export function Projects() {
                 className="absolute bottom-0 left-0 h-0.5 w-0 transition-all duration-500 group-hover:w-full"
                 style={{ backgroundColor: project.color }}
               />
-            </motion.article>
+            </motion.a>
           ))}
         </div>
 
@@ -187,14 +148,14 @@ export function Projects() {
           transition={{ delay: 0.3 }}
         >
           <motion.a
-            href="https://github.com"
+            href="https://github.com/Steadylove"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-(--color-border) px-6 py-2.5 text-sm font-semibold text-(--color-text-secondary) transition-all hover:border-(--color-accent) hover:text-(--color-accent)"
             whileHover={{ scale: 1.02 }}
           >
             {t("viewAll")}
-            <ExternalLinkIcon className="h-4 w-4" />
+            <GitHubIcon className="h-4 w-4" />
           </motion.a>
         </motion.div>
       </div>

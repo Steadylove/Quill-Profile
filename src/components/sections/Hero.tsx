@@ -6,7 +6,7 @@ import { FloatingGeometry } from "@/components/three/FloatingGeometry";
 import { GitHubIcon, LinkedInIcon, TwitterIcon, MailIcon } from "@/components/ui/Icons";
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com", icon: GitHubIcon },
+  { name: "GitHub", href: "https://github.com/Steadylove", icon: GitHubIcon },
   { name: "LinkedIn", href: "https://linkedin.com", icon: LinkedInIcon },
   { name: "Twitter", href: "https://twitter.com", icon: TwitterIcon },
   { name: "Email", href: "mailto:your@email.com", icon: MailIcon },

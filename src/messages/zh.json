@@ -45,21 +45,13 @@
     "viewLive": "在线演示",
     "viewAll": "在 GitHub 查看全部",
     "items": {
-      "project1": {
-        "title": "AI 驱动的数据仪表盘",
-        "description": "一个综合性的分析仪表盘，具备 AI 驱动的洞察、实时数据可视化和智能推荐功能。"
+      "alpacaInvoice": {
+        "title": "Alpaca Invoice",
+        "description": "基于 Aleo 区块链的隐私保护型 B2B 发票系统。利用零知识证明实现私有记录与公共锚点，支持选择性链上可验证审计、两步安全支付流程，以及基于 IndexedDB 的加密本地持久化存储。"
       },
-      "project2": {
-        "title": "Web3 NFT 交易市场",
-        "description": "一个去中心化的数字藏品交易平台，支持钱包连接、智能合约和无缝交易体验。"
-      },
-      "project3": {
-        "title": "全栈 SaaS 平台",
-        "description": "使用 Next.js 和 NestJS 构建的企业级 SaaS 应用，具备认证、支付和团队协作功能。"
-      },
-      "project4": {
-        "title": "实时数据分析平台",
-        "description": "一个可扩展的分析平台，具备实时数据处理、交互式仪表盘和自动化报告功能。"
+      "meiTranslate": {
+        "title": "MeiTrans - AI 智能翻译",
+        "description": "一款支持 8 大 AI 提供商（OpenAI、Claude、DeepSeek、Gemini 等）的 Chrome 智能翻译扩展。支持双引擎翻译、全页面和 PDF 翻译、语音朗读、智能缓存，后端基于 Cloudflare Workers 构建。"
       }
     }
   },
@@ -69,22 +61,16 @@
     "downloadResume": "下载简历",
     "items": {
       "job1": {
-        "company": "科技公司 A",
-        "position": "高级前端开发工程师",
-        "period": "2023 - 至今",
-        "description": "负责 AI 产品的前端架构设计，实现复杂的 UI 组件，指导初级开发人员。"
+        "company": "Stealth Startup",
+        "position": "AI 全栈开发工程师",
+        "period": "2025.12 - 至今",
+        "description": "从零构建 AI 驱动的全栈应用，涵盖前端架构、后端服务以及 AI/LLM 集成。"
       },
       "job2": {
-        "company": "创业公司 B",
-        "position": "全栈开发工程师",
-        "period": "2022 - 2023",
-        "description": "从零构建 Web3 应用，集成区块链技术，开发智能合约交互界面。"
-      },
-      "job3": {
-        "company": "数字代理商 C",
+        "company": "字节跳动",
         "position": "前端开发工程师",
-        "period": "2021 - 2022",
-        "description": "使用 React 和 Next.js 开发响应式 Web 应用，与设计团队协作改进 UI/UX。"
+        "period": "2023.06 - 2025.06",
+        "description": "开发和维护大规模 Web 应用，使用 React 和 Next.js 构建高性能 UI 组件，与跨职能团队协作完成产品交付。"
       }
     }
   },

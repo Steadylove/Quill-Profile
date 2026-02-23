@@ -45,21 +45,13 @@
     "viewLive": "Live Demo",
     "viewAll": "View all on GitHub",
     "items": {
-      "project1": {
-        "title": "AI-Powered Dashboard",
-        "description": "A comprehensive analytics dashboard with AI-driven insights, real-time data visualization, and intelligent recommendations."
+      "alpacaInvoice": {
+        "title": "Alpaca Invoice",
+        "description": "Privacy-preserving B2B invoice system on Aleo blockchain. Leveraging ZK proofs for private records with public anchors, enabling selective chain-verifiable audits, two-step secure payments, and encrypted local persistence via IndexedDB."
       },
-      "project2": {
-        "title": "Web3 NFT Marketplace",
-        "description": "A decentralized marketplace for digital collectibles with wallet integration, smart contracts, and seamless trading experience."
-      },
-      "project3": {
-        "title": "Full Stack SaaS Platform",
-        "description": "An enterprise-grade SaaS application built with Next.js and NestJS, featuring authentication, payments, and team collaboration."
-      },
-      "project4": {
-        "title": "Real-time Analytics Platform",
-        "description": "A scalable analytics platform with real-time data processing, interactive dashboards, and automated reporting features."
+      "meiTranslate": {
+        "title": "MeiTrans - AI Web Translator",
+        "description": "A Chrome extension for intelligent translation powered by 8 AI providers (OpenAI, Claude, DeepSeek, Gemini, etc.). Features dual translation, full-page & PDF translation, TTS, smart caching, and a Cloudflare Workers backend."
       }
     }
   },
@@ -69,22 +61,16 @@
     "downloadResume": "Download Resume",
     "items": {
       "job1": {
-        "company": "Tech Company A",
-        "position": "Senior Frontend Developer",
-        "period": "2023 - Present",
-        "description": "Leading frontend architecture for AI-powered products, implementing complex UI components, and mentoring junior developers."
+        "company": "Stealth Startup",
+        "position": "AI Full Stack Engineer",
+        "period": "2025.12 - Present",
+        "description": "Building AI-powered full stack applications from the ground up, covering frontend architecture, backend services, and AI/LLM integration."
       },
       "job2": {
-        "company": "Startup B",
-        "position": "Full Stack Developer",
-        "period": "2022 - 2023",
-        "description": "Built Web3 applications from scratch, integrated blockchain technologies, and developed smart contract interfaces."
-      },
-      "job3": {
-        "company": "Digital Agency C",
+        "company": "ByteDance",
         "position": "Frontend Developer",
-        "period": "2021 - 2022",
-        "description": "Developed responsive web applications using React and Next.js, collaborated with design teams on UI/UX improvements."
+        "period": "2023.06 - 2025.06",
+        "description": "Developed and maintained large-scale web applications using React and Next.js, built high-performance UI components, and collaborated with cross-functional teams on product delivery."
       }
     }
   },

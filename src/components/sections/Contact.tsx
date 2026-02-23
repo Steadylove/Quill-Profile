@@ -15,8 +15,8 @@ const contactLinks = [
   {
     key: "github",
     icon: GitHubIcon,
-    href: "https://github.com/yourusername",
-    value: "@yourusername",
+    href: "https://github.com/Steadylove",
+    value: "@Steadylove",
     color: "#ffffff",
   },
   {

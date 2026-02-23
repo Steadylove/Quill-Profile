@@ -6,8 +6,7 @@ import { useRef } from "react";
 
 const experiences = [
   { id: "job1", color: "#00ff88", icon: "🚀" },
-  { id: "job2", color: "#627EEA", icon: "⛓️" },
-  { id: "job3", color: "#a855f7", icon: "💻" },
+  { id: "job2", color: "#3B82F6", icon: "💻" },
 ];
 
 export function Experience() {

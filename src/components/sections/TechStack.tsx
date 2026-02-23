@@ -16,57 +16,62 @@ import {
   DockerIcon,
 } from "@/components/ui/Icons";
 
-// Bento Grid Layout with varying sizes
 const bentoItems = [
-  // Large featured card - Frontend
   {
     key: "frontend",
     size: "large",
     color: "#61DAFB",
     skills: [
-      { name: "React", icon: ReactIcon },
-      { name: "Next.js", icon: NextJsIcon },
-      { name: "TypeScript", icon: TypeScriptIcon },
-      { name: "Tailwind", icon: TailwindIcon },
+      { name: "React", icon: ReactIcon, url: "https://react.dev" },
+      { name: "Next.js", icon: NextJsIcon, url: "https://nextjs.org" },
+      { name: "TypeScript", icon: TypeScriptIcon, url: "https://www.typescriptlang.org" },
+      { name: "Tailwind", icon: TailwindIcon, url: "https://tailwindcss.com" },
     ],
   },
-  // Medium card - AI
   {
     key: "ai",
     size: "medium",
     color: "#10A37F",
     skills: [
-      { name: "OpenAI", icon: OpenAIIcon },
-      { name: "LangChain", icon: OpenAIIcon },
-      { name: "RAG", icon: OpenAIIcon },
+      { name: "OpenAI", icon: OpenAIIcon, url: "https://openai.com" },
+      { name: "LangChain", icon: OpenAIIcon, url: "https://www.langchain.com" },
+      { name: "RAG", icon: OpenAIIcon, url: "https://docs.llamaindex.ai" },
     ],
   },
-  // Medium card - Web3
   {
     key: "web3",
     size: "medium",
     color: "#627EEA",
     skills: [
-      { name: "Ethereum", icon: EthereumIcon },
-      { name: "Solidity", icon: SolidityIcon },
-      { name: "Web3.js", icon: EthereumIcon },
+      { name: "Aleo/Leo", icon: EthereumIcon, url: "https://aleo.org" },
+      { name: "ZK Proofs", icon: SolidityIcon, url: "https://zkproof.org" },
+      { name: "Solidity", icon: EthereumIcon, url: "https://soliditylang.org" },
     ],
   },
-  // Medium card - Backend
   {
     key: "backend",
     size: "wide",
     color: "#68A063",
     skills: [
-      { name: "Node.js", icon: NodeJsIcon },
-      { name: "NestJS", icon: NestJsIcon },
-      { name: "Python", icon: PythonIcon },
-      { name: "Docker", icon: DockerIcon },
+      { name: "Node.js", icon: NodeJsIcon, url: "https://nodejs.org" },
+      { name: "NestJS", icon: NestJsIcon, url: "https://nestjs.com" },
+      { name: "Python", icon: PythonIcon, url: "https://www.python.org" },
+      { name: "Docker", icon: DockerIcon, url: "https://www.docker.com" },
     ],
   },
 ];
 
-const otherTools = ["Git", "Linux", "PostgreSQL", "MongoDB", "Redis", "AWS", "Vercel", "Figma"];
+const otherTools = [
+  { name: "Git", url: "https://git-scm.com" },
+  { name: "Vite", url: "https://vite.dev" },
+  { name: "Zustand", url: "https://zustand.docs.pmnd.rs" },
+  { name: "Cloudflare Workers", url: "https://workers.cloudflare.com" },
+  { name: "Hono", url: "https://hono.dev" },
+  { name: "IndexedDB", url: "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API" },
+  { name: "Vercel", url: "https://vercel.com" },
+  { name: "Vitest", url: "https://vitest.dev" },
+  { name: "pnpm", url: "https://pnpm.io" },
+];
 
 export function TechStack() {
   const t = useTranslations("skills");
@@ -137,8 +142,11 @@ export function TechStack() {
               {/* Skills - Horizontal Layout */}
               <div className="relative flex flex-wrap gap-2">
                 {item.skills.map((skill, skillIndex) => (
-                  <motion.div
+                  <motion.a
                     key={skill.name}
+                    href={skill.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group/skill flex cursor-pointer items-center gap-2 rounded-lg border border-transparent bg-(--color-bg)/40 px-3 py-2 transition-all hover:border-(--glass-border) hover:bg-(--color-bg-tertiary)"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -157,7 +165,7 @@ export function TechStack() {
                     <span className="text-sm font-medium text-(--color-text-secondary) transition-colors group-hover/skill:text-(--color-text-primary)">
                       {skill.name}
                     </span>
-                  </motion.div>
+                  </motion.a>
                 ))}
               </div>
             </motion.div>
@@ -177,16 +185,19 @@ export function TechStack() {
           </p>
           <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-center gap-2">
             {otherTools.map((tool, index) => (
-              <motion.span
-                key={tool}
+              <motion.a
+                key={tool.name}
+                href={tool.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cursor-pointer rounded-lg border border-(--glass-border) bg-(--glass-bg) px-4 py-2 font-mono text-xs text-(--color-text-secondary) transition-all hover:border-(--color-accent)/50 hover:text-(--color-accent)"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 + index * 0.03 }}
               >
-                {tool}
-              </motion.span>
+                {tool.name}
+              </motion.a>
             ))}
           </div>
         </motion.div>
