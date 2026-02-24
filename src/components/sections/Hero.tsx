@@ -54,7 +54,7 @@ export function Hero() {
       <div className="absolute right-0 bottom-1/4 h-[600px] w-[600px] translate-x-1/2 rounded-full bg-blue-500/5 blur-[140px]" />
 
       {/* Main Content */}
-      <div className="section-container relative z-10 flex h-screen flex-col justify-center pt-16 pb-20">
+      <div className="section-container relative z-10 flex h-dvh flex-col justify-center pt-16 pb-12 md:h-screen md:pb-20">
         <div className="flex flex-col items-start gap-10 lg:flex-row lg:items-center lg:gap-20 xl:gap-32">
           {/* Left: Text Content */}
           <motion.div
@@ -64,7 +64,7 @@ export function Hero() {
             className="max-w-2xl flex-1 gap-3"
           >
             {/* Status Badge */}
-            <motion.div variants={itemVariants} className="mb-8 inline-flex">
+            <motion.div variants={itemVariants} className="mb-5 inline-flex md:mb-8">
               <span className="inline-flex items-center gap-4 rounded-full border border-(--color-accent)/30 bg-(--color-accent)/5 px-6 py-2.5 text-sm tracking-wide">
                 <span className="relative flex h-3 w-3">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-(--color-accent) opacity-75"></span>
@@ -87,7 +87,7 @@ export function Hero() {
             {/* Name */}
             <motion.h1
               variants={itemVariants}
-              className="mb-6 text-5xl leading-[1.1] font-bold md:text-6xl lg:text-7xl"
+              className="mb-4 text-4xl leading-[1.1] font-bold sm:text-5xl md:mb-6 md:text-6xl lg:text-7xl"
             >
               <span className="text-(--color-text-primary)">{t("name").split(" ")[0]}</span>
               <br />
@@ -119,7 +119,7 @@ export function Hero() {
             <motion.div variants={itemVariants} className="mb-8 flex flex-wrap items-center gap-5">
               <motion.a
                 href="#projects"
-                className="group relative cursor-pointer overflow-hidden rounded-xl bg-(--color-accent) px-8 py-4 font-semibold tracking-wide !text-gray-900"
+                className="group relative cursor-pointer overflow-hidden rounded-xl bg-(--color-accent) px-6 py-3 text-sm font-semibold tracking-wide !text-gray-900 sm:px-8 sm:py-4 sm:text-base"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -143,7 +143,7 @@ export function Hero() {
               </motion.a>
               <motion.a
                 href="#contact"
-                className="cursor-pointer rounded-xl border border-(--color-border) px-8 py-4 font-semibold tracking-wide text-(--color-text-primary) transition-colors hover:border-(--color-accent) hover:text-(--color-accent)"
+                className="cursor-pointer rounded-xl border border-(--color-border) px-6 py-3 text-sm font-semibold tracking-wide text-(--color-text-primary) transition-colors hover:border-(--color-accent) hover:text-(--color-accent) sm:px-8 sm:py-4 sm:text-base"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

@@ -4,7 +4,6 @@ import { TechStack } from "@/components/sections/TechStack";
 import { Projects } from "@/components/sections/Projects";
 import { Experience } from "@/components/sections/Experience";
 import { Contact } from "@/components/sections/Contact";
-
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -19,8 +18,7 @@ export default async function HomePage({ params }: Props) {
       <TechStack />
       <Projects />
       <Experience />
-      {/* Contact as the last scroll section */}
-      <section className="scroll-section relative flex flex-col bg-(--color-bg-secondary)">
+      <section className="scroll-section relative flex flex-col overflow-hidden bg-(--color-bg-secondary)">
         <Contact />
       </section>
     </>

@@ -41,7 +41,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative flex flex-1 flex-col justify-center bg-(--color-bg-secondary) py-20"
+      className="relative flex flex-1 flex-col justify-center bg-(--color-bg-secondary) py-12 md:py-20"
     >
       {/* Background */}
       <div className="absolute inset-0">

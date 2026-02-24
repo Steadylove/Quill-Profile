@@ -22,7 +22,7 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="scroll-section relative flex flex-col justify-center overflow-hidden pt-24 pb-16"
+      className="scroll-section relative flex flex-col justify-center overflow-hidden py-8 md:pt-24 md:pb-16"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-linear-to-b from-(--color-bg) via-(--color-bg-secondary) to-(--color-bg)" />
@@ -32,7 +32,7 @@ export function Experience() {
       <div className="absolute top-0 right-1/4 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-(--color-accent)/5 blur-[140px]" />
       <div className="absolute bottom-0 left-1/4 h-[400px] w-[400px] translate-y-1/2 rounded-full bg-blue-500/5 blur-[120px]" />
 
-      <div className="section-container relative z-10 max-h-[calc(100vh-8rem)] overflow-y-auto pt-32">
+      <div className="section-container relative z-10 pt-16 md:max-h-[calc(100vh-8rem)] md:overflow-y-auto md:pt-32">
         {/* Section Header */}
         <motion.div
           className="mb-8 text-center"
@@ -58,7 +58,7 @@ export function Experience() {
         {/* Timeline */}
         <div ref={containerRef} className="relative mx-auto max-w-5xl">
           {/* Animated Timeline Line */}
-          <div className="absolute top-0 bottom-0 left-8 w-px bg-(--color-border) md:left-1/2">
+          <div className="absolute top-0 bottom-0 left-4 w-px bg-(--color-border) md:left-1/2">
             <motion.div
               className="absolute top-0 left-0 w-full bg-linear-to-b from-(--color-accent) to-(--color-accent)/30"
               style={{ height: lineHeight }}
@@ -74,13 +74,13 @@ export function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ delay: index * 0.2, duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                className={`relative pl-24 md:pl-0 ${
+                className={`relative pl-14 md:pl-0 ${
                   index % 2 === 0 ? "md:pr-[calc(50%+5rem)]" : "md:pl-[calc(50%+5rem)]"
                 }`}
               >
                 {/* Timeline Dot */}
                 <motion.div
-                  className={`absolute top-0 left-0 z-10 -translate-x-1/2 md:left-1/2`}
+                  className={`absolute top-0 left-4 z-10 -translate-x-1/2 md:left-1/2`}
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
@@ -92,10 +92,10 @@ export function Experience() {
                   }}
                 >
                   <div
-                    className="flex h-16 w-16 items-center justify-center rounded-full border-2 bg-(--color-bg) shadow-2xl"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border-2 bg-(--color-bg) shadow-2xl md:h-16 md:w-16"
                     style={{ borderColor: exp.color }}
                   >
-                    <span className="text-2xl">{exp.icon}</span>
+                    <span className="text-base md:text-2xl">{exp.icon}</span>
                   </div>
                   {/* Glow */}
                   <div
@@ -106,28 +106,28 @@ export function Experience() {
 
                 {/* Content Card */}
                 <motion.div
-                  className="group relative cursor-pointer overflow-hidden rounded-3xl border border-(--glass-border) bg-(--glass-bg) p-12 shadow-xl backdrop-blur-md transition-all hover:border-(--color-border-hover) hover:shadow-2xl"
+                  className="group relative cursor-pointer overflow-hidden rounded-2xl border border-(--glass-border) bg-(--glass-bg) p-5 shadow-xl backdrop-blur-md transition-all hover:border-(--color-border-hover) hover:shadow-2xl md:rounded-3xl md:p-12"
                   whileHover={{ y: -8 }}
                 >
                   {/* Accent Line */}
                   <div
-                    className="absolute top-0 bottom-0 left-0 w-2 rounded-l-3xl"
+                    className="absolute top-0 bottom-0 left-0 w-1.5 rounded-l-2xl md:w-2 md:rounded-l-3xl"
                     style={{ backgroundColor: exp.color }}
                   />
 
                   {/* Header */}
-                  <div className="mb-8 pl-6">
-                    <div className="flex flex-wrap items-start justify-between gap-6">
+                  <div className="mb-4 pl-3 md:mb-8 md:pl-6">
+                    <div className="flex flex-wrap items-start justify-between gap-3 md:gap-6">
                       <div>
-                        <h3 className="text-2xl font-bold tracking-tight transition-colors group-hover:text-(--color-accent) md:text-3xl">
+                        <h3 className="text-lg font-bold tracking-tight transition-colors group-hover:text-(--color-accent) md:text-3xl">
                           {t(`items.${exp.id}.position`)}
                         </h3>
-                        <p className="mt-2 text-lg font-medium text-(--color-text-secondary)">
+                        <p className="mt-1 text-sm font-medium text-(--color-text-secondary) md:mt-2 md:text-lg">
                           {t(`items.${exp.id}.company`)}
                         </p>
                       </div>
                       <span
-                        className="shrink-0 rounded-full px-6 py-2 font-mono text-sm font-semibold tracking-wider"
+                        className="shrink-0 rounded-full px-3 py-1 font-mono text-xs font-semibold tracking-wider md:px-6 md:py-2 md:text-sm"
                         style={{
                           backgroundColor: `${exp.color}15`,
                           color: exp.color,
@@ -140,7 +140,7 @@ export function Experience() {
                   </div>
 
                   {/* Description */}
-                  <p className="pl-6 text-lg leading-relaxed text-(--color-text-secondary)">
+                  <p className="pl-3 text-sm leading-relaxed text-(--color-text-secondary) md:pl-6 md:text-lg">
                     {t(`items.${exp.id}.description`)}
                   </p>
 
@@ -165,12 +165,12 @@ export function Experience() {
         >
           <motion.a
             href="/resume.pdf"
-            className="inline-flex cursor-pointer items-center gap-4 rounded-full border border-(--color-border) px-10 py-5 text-lg font-semibold text-(--color-text-secondary) shadow-lg transition-all hover:border-(--color-accent) hover:bg-(--color-bg-tertiary) hover:text-(--color-accent)"
+            className="inline-flex cursor-pointer items-center gap-3 rounded-full border border-(--color-border) px-6 py-3 text-base font-semibold text-(--color-text-secondary) shadow-lg transition-all hover:border-(--color-accent) hover:bg-(--color-bg-tertiary) hover:text-(--color-accent) md:gap-4 md:px-10 md:py-5 md:text-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <svg
-              className="h-6 w-6"
+              className="h-5 w-5 md:h-6 md:w-6"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
